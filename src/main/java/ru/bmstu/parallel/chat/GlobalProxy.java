@@ -18,5 +18,9 @@ public class GlobalProxy implements Runnable {
         xsub.bind(PROTOCOL + "://" + HOST + ":" + GLOBAL_PROXY_XSUB_PORT);
         xpub.bind(PROTOCOL + "://" + HOST + ":" + GLOBAL_PROXY_XPUB_PORT);
         proxy(xsub, xpub, null);
+
+        xsub.close();
+        xpub.close();
+        context.close();
     }
 }

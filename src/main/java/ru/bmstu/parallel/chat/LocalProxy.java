@@ -29,5 +29,8 @@ public class LocalProxy implements Runnable {
             String msg = pullSocket.recvStr();
             pubSocket.send(msg);
         }
+
+        pullSocket.close();
+        context.close();
     }
 }

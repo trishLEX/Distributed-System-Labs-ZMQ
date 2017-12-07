@@ -34,5 +34,7 @@ public class SubHandler implements Runnable {
                 WebSockets.sendText(msg, session, null);
             }
         }
+
+        context.close();
     }
 }
